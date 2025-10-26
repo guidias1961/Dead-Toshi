@@ -159,7 +159,7 @@
             font-weight: 900;
             text-decoration: none;
             text-transform: uppercase;
-            border: none;
+            background: transparent;
             cursor: pointer;
             transition: all 0.3s ease;
             letter-spacing: 1px;
@@ -175,7 +175,7 @@
             width: 0;
             height: 0;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.1);
             transform: translate(-50%, -50%);
             transition: width 0.6s, height 0.6s;
         }
@@ -191,31 +191,33 @@
         }
 
         .btn-twitter {
-            background: linear-gradient(135deg, #1DA1F2 0%, #0d8bd9 100%);
-            color: #fff;
-            box-shadow: 0 8px 25px rgba(29, 161, 242, 0.4);
+            border: 3px solid #1DA1F2;
+            color: #1DA1F2;
+            box-shadow: 0 0 20px rgba(29, 161, 242, 0.3);
         }
 
         .btn-twitter:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 35px rgba(29, 161, 242, 0.6);
+            background: rgba(29, 161, 242, 0.1);
+            box-shadow: 0 0 30px rgba(29, 161, 242, 0.6);
         }
 
         .btn-telegram {
-            background: linear-gradient(135deg, #0088cc 0%, #006699 100%);
-            color: #fff;
-            box-shadow: 0 8px 25px rgba(0, 136, 204, 0.4);
+            border: 3px solid #0088cc;
+            color: #0088cc;
+            box-shadow: 0 0 20px rgba(0, 136, 204, 0.3);
         }
 
         .btn-telegram:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 35px rgba(0, 136, 204, 0.6);
+            background: rgba(0, 136, 204, 0.1);
+            box-shadow: 0 0 30px rgba(0, 136, 204, 0.6);
         }
 
         .btn-buy {
-            background: linear-gradient(135deg, #FF6B00 0%, #FF9500 100%);
-            color: #fff;
-            box-shadow: 0 8px 25px rgba(255, 107, 0, 0.4);
+            border: 3px solid #FF6B00;
+            color: #FF6B00;
+            box-shadow: 0 0 20px rgba(255, 107, 0, 0.3);
             font-size: 28px;
             padding: 25px 60px;
             animation: buyPulse 2s ease-in-out infinite;
@@ -223,18 +225,19 @@
 
         .btn-buy:hover {
             transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 12px 35px rgba(255, 107, 0, 0.6);
+            background: rgba(255, 107, 0, 0.1);
+            box-shadow: 0 0 40px rgba(255, 107, 0, 0.7);
         }
 
         @keyframes buyPulse {
-            0%, 100% { box-shadow: 0 8px 25px rgba(255, 107, 0, 0.4); }
-            50% { box-shadow: 0 8px 45px rgba(255, 107, 0, 0.7); }
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 107, 0, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(255, 107, 0, 0.6); }
         }
 
         /* Gallery */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
             margin: 80px 0;
         }
@@ -318,6 +321,10 @@
 
             .social-buttons {
                 gap: 15px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
             }
         }
     </style>
